@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anonymous and IIFE functions</title>
+</head>
+<body>
+    <!--TASK: PRINT ODD NUMBERS IN AN ARRAY IN ANONYMOUS AND IIFE FUNCTIONS -->
+   <script>
+    // 1.using anonymous function
+
+    let arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15],brr=[],brr1=[];
+    console.log("oroginal array is",arr)
+    var oddNumber1=function(a){
+       for(let b=0;b<a.length;b++){
+        if(a[b]%2!==0)
+        brr.push(arr[b]);
+       }
+       console.log("Odd number array by anonymous function is",brr)
+    }
+    oddNumber1(arr);
+
+    // 2.using IIFE function
+
+    (
+        function(ele){
+            for(let b=0;b<ele.length;b++){
+              if(ele[b]%2!==0)
+              brr1.push(arr[b]);
+       }
+       console.log("Odd number array by IFEE function is",brr1)
+        }
+    )(arr);
+
+   </script>
+</body>
+</html>

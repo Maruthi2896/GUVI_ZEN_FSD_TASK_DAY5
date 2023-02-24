@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <!-- TASK:CONVERT ALL THE STRINGS TO TITLE CASE IN A STRING ARRAY -->
+    <script>
+        // 1.using anonymus function
+   var titleCase= function(str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  return str.join(' ');
+}
+    console.log(titleCase("guvi zen is a online bootcamp"));
+
+   // 2.using IFEE function
+   ( function(str) {
+  str = str.toLowerCase().split(' ');
+  for (var i = 0; i < str.length; i++) {
+    str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+  }
+  var titleCase2=str.join(' ')
+ 
+  console.log(titleCase2 );
+}
+   )("guvi zen is a online bootcamp")
+    
+
+
+    </script>
+</body>
+</html>
