@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- TASK:RETURN ALL THE PALINDROME IN AN ARRAY USING ARROW FUNCTION-->
+    <script>
+       var arr=["kayak","deified","man","rotator","get","win","peep","done","noon"];
+       console.log("original array is ",arr)
+       var palin=[],palin1=[],test;
+
+      var checkPalindrome=(string)=> {
+        for(var a=0;a<string.length;a++){
+          test=true;
+      let len = string[a].length;
+      let word=string[a].split("")
+      for (let i = 0; i < len / 2; i++) {
+         if (word[i] !== word[len - 1 - i]) {
+           test=false;
+         }
+     }
+        if(test)
+        palin.push(string[a]);
+      }
+      console.log("palindromme array by arrow function",palin);
+
+      }
+      checkPalindrome(arr);
+
+    
+    </script>
+</body>
+</html>
