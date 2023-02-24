@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <!-- TASK:Remove duplicates from an array
+.-->
+     <script>
+       
+     
+       var arr = ["apple", "mango", "apple", 
+            "orange", "mango", "mango"];
+      console.log("Original array is",arr)
+
+        //1.using an anonymous function
+   var removeDuplicates= function (b) {
+        return b.filter((item, 
+            index) => b.indexOf(item) === index);
+    }
+      
+     var noDuplicate=removeDuplicates(arr);
+     console.log("Duplicates deleted array by anonymous function is",noDuplicate);
+
+        //1.using an IFEE function
+        (
+            function(a){
+             a= a.filter((item, 
+            index) => a.indexOf(item) === index);
+            console.log("Duplicates deleted array by IFEE function is",a)
+            }
+            )(arr);
+      
+ 
+</script>
+
+      
+</body>
+</html>
